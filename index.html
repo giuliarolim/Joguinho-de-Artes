@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo educativo de Arte para o 6º ano: conheça pinturas e seus artistas.">
+  <title>Arte em Jogo | Pinturas e Artistas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#" aria-label="Arte em Jogo - início">
+      <span class="marca-icone">🎨</span>
+      <span>ARTE <strong>EM JOGO</strong></span>
+    </a>
+    <span class="tag">DESAFIO DE ARTE · 6º ANO</span>
+  </header>
+
+  <main class="container">
+    <section id="tela-inicial" class="painel tela ativa">
+      <div class="selo">APRENDA BRINCANDO</div>
+      <h1>Você conhece<br><span>essas obras de arte?</span></h1>
+      <p class="introducao">Observe as pinturas, descubra quem as criou e teste seus conhecimentos. Mas fique atento: o tempo está correndo!</p>
+      <div class="destaques">
+        <div><span>⏱️</span><strong>20 segundos</strong><small>por pergunta</small></div>
+        <div><span>⭐</span><strong>10 pontos</strong><small>por acerto</small></div>
+        <div><span>🖼️</span><strong>15 desafios</strong><small>de arte</small></div>
+      </div>
+      <label class="campo-label" for="nome-jogador">Seu nome (opcional)</label>
+      <input id="nome-jogador" class="campo" type="text" maxlength="24" placeholder="Digite seu nome">
+      <button id="botao-iniciar" class="botao botao-principal">COMEÇAR O JOGO <span>→</span></button>
+      <p class="nota">Prepare-se para observar, pensar e aprender!</p>
+    </section>
+
+    <section id="tela-jogo" class="tela">
+      <div class="barra-jogo">
+        <div class="progresso-texto"><span id="numero-pergunta">PERGUNTA 1 DE 15</span><span id="pontuacao">⭐ 0 pontos</span></div>
+        <div class="trilho"><div id="progresso" class="progresso"></div></div>
+      </div>
+
+      <div class="cartao-pergunta">
+        <div class="cabecalho-pergunta">
+          <span id="categoria" class="categoria">ARTISTA</span>
+          <div id="temporizador" class="temporizador" aria-live="polite">⏱️ <span id="tempo">20</span>s</div>
+        </div>
+        <div class="imagem-area">
+          <img id="imagem-obra" src="imagens/abaporu.jpg" alt="Imagem da obra de arte" hidden>
+          <div id="imagem-fallback" class="imagem-fallback">
+            <span>🖼️</span>
+            <strong id="titulo-fallback">Observe a obra</strong>
+            <small>Adicione as imagens na pasta "imagens" para exibi-las aqui.</small>
+          </div>
+        </div>
+        <p id="contexto-obra" class="contexto"></p>
+        <h2 id="texto-pergunta">Quem pintou esta obra?</h2>
+        <div id="alternativas" class="alternativas"></div>
+        <div id="mensagem" class="mensagem" role="status" aria-live="polite"></div>
+        <button id="botao-proxima" class="botao botao-principal" hidden>PRÓXIMA PERGUNTA <span>→</span></button>
+      </div>
+    </section>
+
+    <section id="tela-final" class="painel tela">
+      <div class="selo">DESAFIO CONCLUÍDO</div>
+      <div class="trofeu">🏆</div>
+      <h1>Mandou bem<span id="nome-final">, artista</span>!</h1>
+      <p class="introducao">Você terminou o passeio pelo mundo da arte.</p>
+      <div class="resultado">
+        <div><strong id="resultado-pontos">0</strong><small>pontos</small></div>
+        <div><strong id="resultado-acertos">0/15</strong><small>acertos</small></div>
+      </div>
+      <p id="frase-final" class="frase-final"></p>
+      <button id="botao-reiniciar" class="botao botao-principal">JOGAR NOVAMENTE <span>↻</span></button>
+    </section>
+
+    <footer class="rodape">
+      <span>🎨 ARTE EM JOGO</span>
+      <span>Aprender arte pode ser uma aventura.</span>
+    </footer>
+  </main>
+</body>
+</html>
