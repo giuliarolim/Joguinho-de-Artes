@@ -161,6 +161,7 @@ const PERGUNTAS = [
     correta: 0,
     explicacao: "Abaporu é uma obra de Tarsila do Amaral."
   }
+  ];
 const TEMPO_POR_PERGUNTA = 20;
 let indice = 0;
 let pontos = 0;
